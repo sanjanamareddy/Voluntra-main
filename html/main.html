@@ -1,0 +1,303 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Voluntra | Home </title>
+	<link rel="icon" href="{% static 'images/logo.png' %}">
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<style>
+			.button1 #add-button{
+			background-color: #101927;
+			border-radius: 12px;
+			padding: 15px 32px;
+			text-align: center;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-color: #ffffff;
+		  	}
+		  
+			.button1 #add-button:hover{
+				background-color:#49419d;
+				color: white;
+			
+			}
+			#link1{
+				color:white;
+			}
+
+			#div1{
+  
+				height: 300px;
+				width: 1200px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 7px;
+			  }
+			  #div2{
+				height: 300px;
+				width: 1200px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 7px;
+			  }
+			  #div3{
+				height: 300px;
+				width: 1200px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 7px;
+			  }
+			  #div4{
+				height: 300px;
+				width: 1200px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 7px;
+			  }
+			  #div5{
+				height: 300px;
+				width: 1200px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 7px;
+			  }
+			  #div6{
+				height: 300px;
+				width: 1200px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 7px;
+			  }
+
+			  .left {
+				left: -28.3%;
+				}
+				
+				/* Place the container to the right */
+				.right {
+				left: 28.5%;
+				}
+		
+	</style> 
+</head>
+
+<body>
+	<div class="cyan">
+
+	</div>
+		<div class="box1">
+			<a class="login1" style="text-decoration: none;" href="/login"></a>
+		</div>
+	<header>
+		<img src="{% static 'images/logo1.png' %}" width="159" height="100" style="margin-bottom: 8px;">
+		<div class="h1pos">
+			<li>
+				<a class="hover-underline-animation" id="link" style="text-decoration: none;"
+					href="/aboutUs">About Us</a>
+			</li>
+			<li>
+				<a class="hover-underline-animation" id="link" style="text-decoration: none;"
+					href="/myEvents">My Events</a>
+			</li>
+
+			{% if user.is_authenticated %}
+				<li>Hello, {{user.username}}</li>
+				<li>
+					<a class="hover-underline-animation" style="text-decoration: none;" href="/logout">Logout</a>
+				</li>
+			{% else %}
+				<li>
+					<a class="hover-underline-animation" style="text-decoration: none;" href="/login">Login</a>
+				</li>
+			{% endif %}
+
+		</div>
+	</header>
+	<main>
+
+		<!-- {% if user.is_authenticated %}
+				<a id="link" style="text-decoration: none;" href="/login1">Add an event</a>
+		{% else %}
+			<a id="link" style="text-decoration: none;" href="/login1">Add an event</a>
+		{% endif %}
+		
+		{% if user.is_authenticated %}
+			<button id="post-an-event" >
+				<a id="link" style="text-decoration: none;" href="/loginOrg">Post an event</a>
+			</button>	
+		{% else %}
+			<button id="post-an-event">
+				<a id="link" style="text-decoration: none;" href="/login1">Post an event</a>
+			</button>
+		{% endif %} -->
+
+
+		<div class="home1">
+			<div class="h2pos1">
+				Together We Can Do It!
+			</div>
+			<div class="info">
+				<div class="p1">
+					Volunteering can be a <strong>transformative</strong> experience that promotes <strong>personal growth</strong> and development.
+				</div>
+				<div class="line"></div>
+				<div class="p2">
+					Many people have already volunteered to their fullest! It’s your time!
+				</div>
+			</div>
+		</div>
+
+		<div class="button1">	
+			{% if user.is_authenticated %}		
+				<button id="add-button">
+					<a id="link" style="text-decoration: none;" href="/loginOrg">Post An Event</a>
+				</button>
+			{% else %}	
+				<button id="add-button">
+					<a id="link" style="text-decoration: none;" href="/login1">Post An Event</a>
+				</button>
+			{% endif %}
+
+			{% if user.is_authenticated %}
+				<button id="add-button">
+					<a id="link1" style="text-decoration: none;" href="/joinEvent_1">Join An Event</a>
+				</button>
+			{% else %}
+				<button id="add-button">
+					<a id="link1" style="text-decoration: none;" href="/login1">Join An Event</a>
+				</button>
+			{% endif %}
+				
+		</div>
+
+		<div class="timeline">
+			<div id="div1" data-aos="slide-right">
+			<div class="container left">
+				<div class="content">
+					<h2>Helping</h2>
+					<div class="align">
+						<img src="{% static 'images/helping.png' %}">
+						<span>By volunteering to serve food, you 
+							can directly impact the lives 
+							of individuals or families 
+							facing food insecurity and make 
+							a positive difference in your 
+							community.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div id="div2"  data-aos="slide-left">
+			<div class="container right">
+				<div class="content">
+					<h2>Cleaning</h2>
+					<div class="align">
+						<img src="{% static 'images/cleaning.png' %}">
+						<span> By volunteering for cleaning can 
+							be a fulfilling and impactful 
+							way to make a difference in 
+							your community and beyond.
+							It's a wonderful way to give back 
+							to your community or make a 
+							positive impact on the environment. </span>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div id="div3"  data-aos="slide-right">
+			<div class="container left">
+				<div class="content">
+					<h2>Event</h2>
+					<div class="align">
+						<img src="{% static 'images/event.png' %}">
+						<span> Volunteering for events can 
+							be a fun and rewarding way to 
+							get involved in your community, 
+							support causes you care about, 
+							and gain valuable experience.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div id="div4"  data-aos="slide-left">
+			<div class="container right">
+				<div class="content">
+					<h2>Donation</h2>
+					<div class="align">
+						<img src="{% static 'images/donation.png' %}">
+						<span> Volunteering for donation initiatives 
+							involves contributing your time and 
+							skills to support organizations, 
+							charities, or events that aim 
+							to collect donations for various causes</span>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div id="div5"  data-aos="slide-right">
+			<div class="container left">
+				<div class="content">
+					<h2>School</h2>
+					<div class="align">
+						<img src="{% static 'images/school.png' %}">
+						<span> Volunteering in schools is 
+							a valuable way to contribute 
+							to the education and well-being 
+							of students while supporting 
+							teachers and staff.
+							Your support can help create a 
+							more enriching and inclusive 
+							learning environment for 
+							everyone involved.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div id="div6"  data-aos="slide-left">
+			<div class="container right">
+				<div class="content">
+					<h2>Pandemic</h2>
+					<div class="align">
+						<img src="{% static 'images/pandemic.png' %}">
+						<span>Volunteering during pandemics 
+							is a crucial way to provide support 
+							to individuals, communities, and 
+							organizations in times of crisis.
+							Pandemics like the COVID-19 
+							pandemic have highlighted the 
+							importance of volunteers in 
+							areas such as healthcare, 
+							emergency response and more.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div>
+		<span>
+		Volunteering is a wonderful way to give back to your community or a cause you care about. <br>
+          ©2023.All rights reserved 
+				</span>
+			</div>
+		</footer>
+	</main>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+
+</html>

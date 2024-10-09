@@ -1,0 +1,375 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="{% static 'css/joinaneventpage2.css' %}">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Voluntra | Events1 </title>
+	<link rel="icon" href="{% static 'images/logo.png' %}">
+	<meta name="viewport" content="width=device-width">
+	<meta charset="utf-8">
+    <style>
+        body {
+  background-color:#101927;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0;
+}
+.cyan{
+  background-color: #1B4D6D;
+  position: absolute;
+  top: -6rem;
+  height: 40.25rem;
+  width: 60.75rem;
+  border-radius: 50%;
+  --tw-blur: blur(10rem);
+  filter: var(--tw-blur);
+  z-index: -1;
+}
+  header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
+  
+  li {
+    list-style-type: none;
+    position: relative;
+    padding-right: 50px;
+  }
+  
+  .h1pos {
+    margin-right: 40px;
+    font-size: 23px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #link {
+    color: white;
+  }
+  
+  #link1 {
+    color: #0B2447;
+  }
+  
+  .button1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 180px;
+    
+  }
+  
+  #join-an-event {
+    background-color: #0B2447;
+    border-color: black;
+    border-radius: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+  }
+  
+  #invite-a-friend {
+    background-color: white;
+    border-color: black;
+    border-radius: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0B2447;
+  }
+  
+  .boxmain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - 100px);
+  }
+  
+  .boximg {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #copy-link-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #copy-link-blur {
+    background-color: #818181;
+    opacity: 0.4;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color:#0B2447;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:#ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  #copy-link-modal {
+    background-color: white;
+    width: 500px;
+    z-index: 99;
+    border-radius: 7px;
+    padding: 25px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #copy-link-btn {
+  margin-top:8px;
+   text-align: center;
+   background-color: #0B2447;
+   color:white;
+   border-radius: 5px;
+   padding:14px;
+   margin-bottom: 10px;
+   cursor: pointer;
+  }
+  .top-one{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+  .middle-one{
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .invite-link{
+    display: flex;
+    align-items: center;
+    background-color:#f1efef;
+    border-radius: 5px;
+  }
+  .image{
+    padding-left: 20%;
+  }
+  .p{
+    color: #0B2447;
+  }
+  .container{
+    background-color: #ffffff;
+    height: 550px;
+    width: 700px;
+    border-radius: 25px;
+  }
+  .container p {
+    color: #0B2447;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+.container button1{
+  position: fixed;
+}
+  
+
+     </style>
+</head>
+
+<body>
+	<div class="cyan">
+
+	</div>
+	<header>
+		<img src="{% static 'images/logo.png' %}" width="120" height="80" style="margin-bottom: 8px;">
+		<div class="h1pos">
+			<li>
+				<a class="hover-underline-animation" id="link" style="text-decoration: none;" href="/home">Home</a>
+			</li>
+			<li>
+				<a class="hover-underline-animation" id="link" style="text-decoration: none;" href="/aboutUs">About Us</a>
+			</li>
+			<li>
+				<a class="hover-underline-animation" id="link" style="text-decoration: none;" href="/myEvents">My Events</a>
+			</li>
+		</div>
+	</header>
+	<div class="boxmain">
+        <div class="box1">
+			<div class="image">
+				<img src="{% static 'images/spe2.png' %}" height="400px"width="600px">
+		</div>
+    </div>
+		<div class="boximg">
+			<div class="container">
+        <h2>
+          <p> Name of the event : kjsdbvbsfvuwfo</p>
+          <p>Description  : cuhbwqjdvgiyqwgvouncqwdgv
+            iucnwiuvbwiuvwduivbiuwh</p>
+            <p>No. of volunteers required : 30</p>
+            <p>Date of the event : 01/12/2023 </p>
+            <p>Venue :vjhsbviysvuisvkshfvbiksbv
+              ksdfhvbisdvbuivoiusnvshv
+            </p>
+            
+        </h2>
+				<div class="button1">
+					<button id="Join-an-event">
+						<a id="link" style="text-decoration: none;" href="/joinEvent_3">Join the Event</a>
+					</button>
+					<!-- <button id="invite-a-friend">
+						<div id="link1" style="text-decoration: none;">Invite a Friend</div>
+					</button> -->
+				</div>
+			</div>
+		</div>
+		<!-- <div id="copy-link-overlay" style="display: none;">
+        
+			<div id="copy-link-blur"></div>
+			<div id="copy-link-modal">
+				<div class="top-one"> 
+					<img class="invite" src="{% static 'images/invite.svg' %}">
+					<span>Invite a friend</span>
+				</div>
+				<div class="middle-one">
+					<div class="link-text">Link</div>
+					<div class="invite-link">
+						<img src="{% static 'images/link.svg' %}">
+					</div>
+				</div>
+				<div id="copy-link-btn">Copy link</div>
+			</div>
+		</div> -->
+	</div>
+	<script src="{% static 'java_script/joineventpage2.js' %}"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- {% load static %}
+
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="{% static 'css/joinaneventpage2.css' %}">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Voluntra | Events1 </title>
+	<link rel="icon" href="{% static 'images/logo.png' %}">
+	<meta name="viewport" content="width=device-width">
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="cyan">
+
+	</div>
+	<header>
+		<img src="{% static 'images/logo.png' %}" width="120" height="80" style="margin-bottom: 8px;">
+		<div class="h1pos">
+			<li>
+				<a class="hover-underline-animation" id="link" style="text-decoration: none;" href="/home">Home</a>
+			</li>
+			<li>
+				<a class="hover-underline-animation" id="link" style="text-decoration: none;" href="/aboutUs">About Us</a>
+			</li>
+			<li>
+				<a class="hover-underline-animation" id="link" style="text-decoration: none;" href="/myEvents">My Events</a>
+			</li>
+		</div>
+	</header>
+	<div class="boxmain">
+		<div class="boximg">
+			<div class="white-box"></div>
+		</div>
+		<div class="boximg">
+			<div class="boxdetails">
+				<div class="button1">
+					<button id="Join-an-event">
+						<a id="link" style="text-decoration: none;" href="/joinEvent_3">Join the Event</a>
+					</button>
+					<button id="invite-a-friend">
+						<div id="link1" style="text-decoration: none;">Invite a Friend</div>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div id="copy-link-overlay" style="display: none;">
+        
+			<div id="copy-link-blur"></div>
+			<div id="copy-link-modal">
+				<div class="top-one"> 
+					<img class="invite" src="{% static 'images/invite.svg' %}">
+					<span>Invite a friend</span>
+				</div>
+				<div class="middle-one">
+					<div class="link-text">Link</div>
+					<div class="invite-link">
+						<img src="{% static 'images/link.svg' %}">
+					</div>
+				</div>
+				<div id="copy-link-btn">Copy link</div>
+			</div>
+		</div>
+	</div>
+	<script src="{% static 'java_script/joineventpage2.js' %}"></script>
+</body>
+
+</html> -->

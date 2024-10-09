@@ -1,0 +1,179 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/joineventpage1.css' %}">
+    <script defer src="{% static 'java_script/joinanevent1.js' %}"> </script>
+    <title> Voluntra | Events </title>
+	<link rel="icon" href="{% static 'images/logo.png' %}">
+  <meta name="viewport" content="width=device-width">
+	<meta charset="utf-8">
+     
+</head>
+
+<body>
+  <div class="cyan">
+
+	</div>
+  <header>
+		<img src="{% static 'images/logo1.png' %}" width="159" height="100" style="margin-bottom: 8px;">
+		<div class="h1pos">
+			<li>
+				<a class="hover-underline-animation" id="link1" style="text-decoration: none;" href="/home">Home</a>
+			</li>
+			<li>
+				<a class="hover-underline-animation" id="link1" style="text-decoration: none;" href="/aboutUs">About Us</a>
+			</li>
+			<li>
+				<a class="hover-underline-animation" id="link1" style="text-decoration: none;" href="/myEvents">My Events</a>
+			</li>
+		</div>
+	</header>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search the city...">
+        <button class="search-button">Search</button>
+    </div>
+      
+        <div class="container">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel"> 
+          
+        
+            <!-- images for slides -->
+
+            <div class="arrow">
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <div class="slideshow-container">
+        
+                <div class="mySlides fade">
+                  
+                  <img src="{% static 'images/event.png' %}" width="1000" height="530">
+                </div>
+        
+                <div class="mySlides fade">
+                 
+                  <img src="{% static 'images/pandemic.png' %}" width="1000" height="530">
+                </div>
+        
+                <div class="mySlides fade">
+                 
+                  <img src="{% static 'images/helping.png' %}" width="1000" height="530">
+                </div>
+                <div class="mySlides fade">
+                 
+                  <img src="{% static 'images/cleaning.png' %}" width="1000" height="530">
+                </div>
+                <div class="mySlides fade">
+                  
+                  <img src="{% static 'images/donation.png' %}" width="1000" height="530">
+                </div>
+                <div class="mySlides fade">
+                  
+                  <img src="{% static 'images/school.png' %}" width="1000" height="530">
+                </div>
+        
+              </div>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <br>
+        
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+              <span class="dot" onclick="currentSlide(6)"></span>
+
+              <div class="mainbox">
+                <!-- <div class="box1">
+                    <div class="wrapper1">
+                        <div class="imgcontainer1">
+                            <img src="{% static 'images/image1.jpg' %}" alt="Image" width="400px" height="200px">
+                        </div>
+                        <div class="detailscontainer1">
+                            <h2>Name: jkvkjbwfb</h2>
+                            <h3>Description: kvsdjbfvsjvnuisbnvsiukkejrnvkjvnwjn flevloermoemrpive</h3>
+                            <div class=b1>
+                            <button >
+                                <a id="link" style="text-decoration: none;" href="/joinEvent_2">View event details</a>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="box2">
+                    <div class="wrapper2">
+                    <div class="imgcontainer2">
+                        <img src="{% static 'images/image1.jpg' %}" alt="Image" width="400px" height="200px">
+                    </div>
+                    <div class="detailscontainer2">
+                      <h2>Name: jkvkjbwfb</h2>
+                      <h3>Description: kvsdjbfvsjvnuisbnvsiukkejrnvkjvnwjn flevloermoemrpive</h3>
+                      <div class=b1>
+                          <button  class="button">
+                          <a id="link" style="text-decoration: none;" href="/html/eventdetails.html">View event details</a>
+                          </button>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="box3">
+                  <div class="wrapper3">
+                      <div class="imgcontainer3">
+                          <img src="{% static 'images/image1.jpg' %}" alt="Image" width="400px" height="200px">
+                      </div>
+                      <div class="detailscontainer3">
+                          <h2>Name: jkvkjbwfb</h2>
+                          <h3>Description: kvsdjbfvsjvnuisbnvsiukkejrnvkjvnwjn flevloermoemrpive</h3>
+                          <div class=b1>
+                          <button >
+                              <a id="link" style="text-decoration: none;" href="/html/eventdetails.html">View event details</a>
+                          </button>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="box4">
+                  <div class="wrapper4">
+                  <div class="imgcontainer4">
+                      <img src="{% static 'images/image1.jpg' %}" alt="Image" width="400px" height="200px">
+                  </div>
+                  <div class="detailscontainer4">
+                    <h2>Name: jkvkjbwfb</h2>
+                    <h3>Description: kvsdjbfvsjvnuisbnvsiukkejrnvkjvnwjn flevloermoemrpive</h3>
+                    <div class=b1>
+                        <button >
+                        <a id="link" style="text-decoration: none;" href="/html/eventdetails.html">View event details</a>
+                        </button>
+                    </div>
+                </div>
+                </div>
+              </div>
+            
+          </div> -->
+
+
+        {% for event in events %}
+            <div class="box">
+                <div class="wrapper">
+                    <div class="imgcontainer">
+                      <img src="{{ event.eventPoster }}" alt="Image" width="400px" height="200px">
+
+                      <!-- <img src="{% static '/media/' %}{{ event.eventPoster }}" alt="Image" width="400px" height="200px"> -->
+                    </div>
+                    <div class="detailscontainer">
+                        <h2>Name: {{ event.nameOfEvent }}</h2>
+                        <h3>Description: {{ event.descOfEvent }}</h3>
+                        <div class="b1">
+                            <button>
+                                <a id="link" style="text-decoration: none;" href="/joinEvent_2">View event details</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+     
+</body>
+</html>
+

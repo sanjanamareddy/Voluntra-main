@@ -1,0 +1,250 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Voluntra | About Us</title>
+	<link rel="icon" href="{% static 'images/logo.png' %}">
+	<link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:#101927;
+            margin: 0;
+            line-height: inherit;
+          }
+        
+          .cyan{
+            background-color: #1B4D6D;
+            position: absolute;
+            top: -6rem;
+            height: 40.25rem;
+            width: 60.75rem;
+            border-radius: 50%;
+            --tw-blur: blur(10rem);
+            filter: var(--tw-blur);
+            z-index: -1;
+          }
+        li{
+            list-style-type: none;
+            position: relative;
+            padding-right: 50px;
+        }
+        
+        .hover-underline-animation {
+          display: inline-block;
+          position: relative;
+          color:white;
+        }
+        
+        .hover-underline-animation:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color:white;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+        
+        .hover-underline-animation:hover:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+         
+          #link{
+            color:white;
+          }
+          #link1{
+            color:#0B2447;
+          }
+        
+        header{
+          display:flex;
+          width:100%;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+        
+        .h1pos{
+            margin-right:40px;
+            font-size: 23px;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .align{
+            display: flex;
+            flex-direction: column;
+            gap:3rem;
+            margin-top: 30px;
+        }
+        .inner-section{
+            width: 55%;
+            float: right;
+            background-color:white;
+            padding: 70px 30px 30px 30px;
+            box-shadow: 13px 12px 8px rgba(0,0,0,0.3);
+            border-radius: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+        .inner-section h1{
+            margin-bottom: 30px;
+            font-size: 30px;
+            font-weight: 900;
+        }
+        .text{
+            font-size: 13px;
+            color: #545454;
+            line-height: 30px;
+            text-align: justify;
+            margin-bottom: 40px;
+        }
+        @media screen and (max-width:1200px){
+            .inner-section{
+                padding: 80px;
+            }
+        }
+        @media screen and (max-width:1000px){
+            .about{
+                background-size: 100%;
+                padding: 100px 40px;
+            }
+            .inner-section{
+                width: 100%;
+            }
+        }
+        
+        @media screen and (max-width:600px){
+            .about{
+                padding: 0;
+            }
+            .inner-section{
+                padding: 60px;
+            }
+            .skills button{
+                font-size: 19px;
+                padding: 5px;
+                width: 160px;
+            }
+        }
+        footer{
+          color: #ffffff59;;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding-bottom: 4rem;
+          padding-top: 4rem;
+        }
+    </style>
+	<div class="cyan">
+	</div>
+    <header>
+    <img src="{% static 'images/logo1.png' %}" width="159" height="100" style="margin-bottom: 8px;">
+    <div class="h1pos">
+        <li>
+            <a class="hover-underline-animation" id="link" style="text-decoration: none;"
+                href="/myEvents">My Events</a>
+        </li>
+    </div>
+</header>
+
+ <div class="align">
+    <div>
+        <img src="{% static 'images/alekhya.jpeg' %}" style="width: 250px; height: 350px; border-radius: 200px; margin-left: 40px;">
+        <div class="inner-section">
+            <h1>Makuluri Alekhya</h1>
+            <p class="text">
+            Hello, I'm Makuluri Alekhya. I'm currently studying in the year 2nd in Gokaraju Rangaraju Insititute of Engineering and Technology with a major in 
+            Artificial Intelligence and Machine learning. I'm a Frontend Web Developer. I'm passionate about technology and currently learning Next.js, Express.js and Java.
+            I'm also familiar with C and Python.
+            </p>
+        </div>
+    </div>
+    <div>
+        <img src="{% static 'images/charan.jpeg' %}" style="width: 250px; height: 350px; border-radius: 200px; margin-left: 40px;">
+        <div class="inner-section">
+            <h1>Yarlagadda Charan</h1>
+            <p class="text">
+            Hello, I'm Yarlagadda Charan. I'm currently studying in the year 2nd in Gokaraju Rangaraju Insititute of Engineering and Technology with a major in 
+            Information Technology. I'm a Frontend Web Developer. I'm passionate about technology and currently learning Next.js, Express.js and Java.
+            I'm also familiar with C and Python.
+            </p>
+        </div>
+        </div>
+    <div>
+        <img src="{% static 'images/meghana.jpeg' %}" style="width: 250px; height: 350px; border-radius: 200px; margin-left: 40px;">
+        <div class="inner-section">
+            <h1>Sheru Meghana</h1>
+            <p class="text">
+            Hello, I'm Sheru Meghana. I'm currently studying in the year 2nd in Gokaraju Rangaraju Insititute of Engineering and Technology with a major in 
+            Artificial Intelligence and Machine learning. I'm a Backend Web Developer. I'm passionate about technology and currently learning Next.js, Express.js and Java.
+            I'm also familiar with C and Python.
+            </p>
+        </div>
+    </div>
+    <div>
+        <img src="{% static 'images/praneetha.jpeg' %}" style="width: 250px; height: 350px; border-radius: 200px; margin-left: 40px;">
+        <div class="inner-section">
+            <h1>Praneetha Reddy N</h1>
+            <p class="text">
+            Hello, I'm Praneetha Reddy N. I'm currently studying in the year 2nd in Gokaraju Rangaraju Insititute of Engineering and Technology with a major in 
+            Computer Science. I'm a Frontend Web Developer. I'm passionate about technology and currently learning Next.js, Express.js and Java.
+            I'm also familiar with C and Python.
+            </p>
+        </div>
+    </div>
+    <div>
+        <img src="{% static 'images/teja.jpeg' %}" style="width: 250px; height: 350px; border-radius: 200px; margin-left: 40px;">
+        <div class="inner-section">
+            <h1>Sai Teja Reddy</h1>
+            <p class="text">
+            Hello, Sai Teja Reddy. I'm currently studying in the year 2nd in Gokaraju Rangaraju Insititute of Engineering and Technology with a major in 
+            Information Technology. I'm a Backend Web Developer. I'm passionate about technology and currently learning Next.js, Express.js and Java.
+            I'm also familiar with C and Python.
+            </p>
+        </div>
+    </div>
+    <div>
+        <img src="{% static 'images/tilak.jpeg' %}" style="width: 250px; height: 350px; border-radius: 200px; margin-left: 40px;">
+        <div class="inner-section">
+            <h1>Vyomakeswara Tilak G</h1>
+            <p class="text">
+            Hello, Vyomakeswara Tilak G. I'm currently studying in the year 2nd in Gokaraju Rangaraju Insititute of Engineering and Technology with a major in 
+            Information Technology. I'm a Frontend Web Developer. I'm passionate about technology and currently learning Next.js, Express.js and Java.
+            I'm also familiar with C and Python.
+            </p>
+        </div>
+    </div>
+ </div>
+<footer>
+    <div>
+<span>
+Volunteering is a wonderful way to give back to your community or a cause you care about. <br>
+  ©2023.All rights reserved 
+        </span>
+    </div>
+</footer>
+</body>
+
+</html>

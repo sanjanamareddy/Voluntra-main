@@ -1,0 +1,185 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>My Events</title>
+    <style>
+      .wrapper {
+  width: 600px; /* Adjust as needed */
+  background-color: #ffffff;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  margin:  auto; /* Adjust top and bottom margin as needed, auto for centering */
+  display: flex;
+  margin-top: -2%;
+}
+
+.imgcontainer {
+  padding: 20px; /* Adjust as needed */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.detailscontainer {
+  flex: 1;
+  padding: 20px; /* Adjust as needed */
+}
+
+h2, p {
+  margin: 0; /* Remove default margin */
+  color: #ffffff;
+}
+.box{
+  color: #ffffff;
+  align-items: center;
+  padding-top: 6%;
+}
+header {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  background-color:#101927;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li{
+  list-style-type: none;
+  position: relative;
+  padding-right: 50px;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color:#101927;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:#ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.main{
+  text-align: center;
+  color: #ffffff  ;
+}
+#link{
+  color: #ffffff;
+}
+.h1pos{
+  margin-right:40px;
+  font-size: 23px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.h2text {
+  justify-content: space-evenly;
+  color: rgb(255, 255, 255);
+  margin-right: 200px;
+  margin-left: 600px;
+  font-size: 24px;
+  font-weight: 400;
+
+}
+.h1{
+  color: #ffffff;
+}
+button{
+ color: #ffffff;
+   }
+    </style>
+</head>
+<body>
+  <header>
+    <img src="{% static 'images/logo.png' %}" width="159" height="100" style="margin-left: 8px;">
+      <div class="h1pos">
+        <li>
+          <a class="hover-underline-animation" id="link" style="text-decoration: none;" href="/home">Home</a>
+        </li>
+        <li>
+          <a class="hover-underline-animation" id="link" style="text-decoration: none;" href="/aboutUs">About Us</a>
+        </li>
+      </header>
+  <main>
+    <header>
+  <div class="h2text">
+    <h1> My Events </h1>
+  </div>
+</header>
+  </main>
+<div class="box">
+
+<div class="wrapper">
+    <div class="imgcontainer">
+        <img src="{% static 'images/image1.jpg' %}" alt="Image" width="300px" height="200px">
+    </div>
+    <div class="detailscontainer">
+        <h2>Name: {{context.nameOfEvent}}</h2>
+        <p>Description: kvsdjbfvsjvnuisbnvsiukkejrnvkjvnwjn flevloermoemrpive</p>
+        <div class=b1>
+          <button >
+            <a id="link" style="text-decoration: none;" href="/joinEvent_2">View event details</a>
+          </button>
+        </div>
+    </div>  
+</div>
+<div class="wrapper">
+  <div class="imgcontainer">
+      <img src="{% static 'images/image1.jpg' %}" alt="Image" width="300px" height="200px">
+  </div>
+  <div class="detailscontainer">
+      <h2>Name: jkvkjbwfb</h2>
+      <p>Description: kvsdjbfvsjvnuisbnvsiukkejrnvkjvnwjn flevloermoemrpive</p>
+      <div class=b1>
+        <button >
+          <a id="link" style="text-decoration: none;" href="/joinEvent_2">View event details</a>
+        </button>
+      </div>
+  </div>
+</div>
+
+<!-- {% for event in context %}
+    <div class="wrapper">
+      <div class="imgcontainer">
+        <img src="{% static 'images/image1.jpg' %}" alt="Image" width="300px" height="200px">
+      </div>
+      <div class="detailscontainer">
+        <h2>Name: {{ event.nameOfEvent }}</h2>
+        <p>Description: {{ event.descOfEvent}}</p>
+        <div class="b1">
+          <button>
+            <a id="link" style="text-decoration: none;" href="{% url 'event_details' event.id %}">View event details</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  {% endfor %} -->
+</div>
+
+</body>
+</html>
